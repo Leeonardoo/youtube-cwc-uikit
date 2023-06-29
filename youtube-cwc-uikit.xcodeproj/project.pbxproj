@@ -12,6 +12,10 @@
 		DF35FEEE2A4D0E81005759AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF35FEED2A4D0E81005759AA /* ViewController.swift */; };
 		DF35FEF32A4D0E83005759AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF35FEF22A4D0E83005759AA /* Assets.xcassets */; };
 		DF35FEF62A4D0E83005759AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF35FEF42A4D0E83005759AA /* LaunchScreen.storyboard */; };
+		DF55A48C2A4D2525004DFAB1 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF55A48B2A4D2525004DFAB1 /* Video.swift */; };
+		DF55A48E2A4D254C004DFAB1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF55A48D2A4D254C004DFAB1 /* Model.swift */; };
+		DF55A4902A4D2562004DFAB1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF55A48F2A4D2562004DFAB1 /* Constants.swift */; };
+		DF55A4922A4D2568004DFAB1 /* ConstantsTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF55A4912A4D2568004DFAB1 /* ConstantsTemplate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		DF35FEF22A4D0E83005759AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF35FEF52A4D0E83005759AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF35FEF72A4D0E83005759AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF55A48B2A4D2525004DFAB1 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		DF55A48D2A4D254C004DFAB1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DF55A48F2A4D2562004DFAB1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DF55A4912A4D2568004DFAB1 /* ConstantsTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsTemplate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +65,13 @@
 				DF35FEE92A4D0E81005759AA /* AppDelegate.swift */,
 				DF35FEEB2A4D0E81005759AA /* SceneDelegate.swift */,
 				DF35FEED2A4D0E81005759AA /* ViewController.swift */,
+				DF55A48D2A4D254C004DFAB1 /* Model.swift */,
+				DF55A48F2A4D2562004DFAB1 /* Constants.swift */,
+				DF55A4912A4D2568004DFAB1 /* ConstantsTemplate.swift */,
 				DF35FEF22A4D0E83005759AA /* Assets.xcassets */,
 				DF35FEF42A4D0E83005759AA /* LaunchScreen.storyboard */,
 				DF35FEF72A4D0E83005759AA /* Info.plist */,
+				DF55A48B2A4D2525004DFAB1 /* Video.swift */,
 			);
 			path = "youtube-cwc-uikit";
 			sourceTree = "<group>";
@@ -134,9 +146,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF55A4922A4D2568004DFAB1 /* ConstantsTemplate.swift in Sources */,
+				DF55A48E2A4D254C004DFAB1 /* Model.swift in Sources */,
 				DF35FEEE2A4D0E81005759AA /* ViewController.swift in Sources */,
+				DF55A48C2A4D2525004DFAB1 /* Video.swift in Sources */,
 				DF35FEEA2A4D0E81005759AA /* AppDelegate.swift in Sources */,
 				DF35FEEC2A4D0E81005759AA /* SceneDelegate.swift in Sources */,
+				DF55A4902A4D2562004DFAB1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
