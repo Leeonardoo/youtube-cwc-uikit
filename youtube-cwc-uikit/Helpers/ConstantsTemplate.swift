@@ -14,4 +14,5 @@ import Foundation
 //
 //    static var apiUrl = ""
 //    static var videoCellId = "VideoCell"
+//    static var ytEmbedUrl = "https://www.youtube.com/embed/"
 //}

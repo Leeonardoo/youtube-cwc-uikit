@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ListViewController: UIViewController {
 
     private lazy var tableView: UITableView = {
         let view = UITableView()
@@ -29,6 +29,8 @@ class ViewController: UIViewController {
     }
     
     private func setupViews() {
+        self.view.backgroundColor = .systemBackground
+        
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
@@ -58,7 +60,7 @@ class ViewController: UIViewController {
 }
 
 //MARK: - DataSource
-extension ViewController: UITableViewDataSource {
+extension ListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         videos.count
@@ -74,9 +76,14 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
-extension ViewController: UITableViewDelegate {
+extension ListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
+        
+        let video = self.videos[indexPath.row]
+        let viewController = DetailViewController(video)
+        
+        self.present(viewController, animated: true)
     }
 }
