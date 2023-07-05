@@ -9,11 +9,11 @@ import Foundation
 
 struct Video: Decodable {
     
-    var videoId: String = ""
-    var title: String = ""
-    var description: String = ""
-    var thumbUrl: String = ""
-    var publishedAt: String = ""
+    var videoId: String
+    var title: String
+    var description: String
+    var thumbUrl: String
+    var publishedAt: Date
 
     enum CodingKeys: String, CodingKey {
         
@@ -34,8 +34,8 @@ struct Video: Decodable {
         let snippetContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .snippet)
         
         self.title = try snippetContainer.decode(String.self, forKey: .title)
-        self.description = try container.decode(String.self, forKey: .description)
-        self.publishedAt = try container.decode(String.self, forKey: .publishedAt)
+        self.description = try snippetContainer.decode(String.self, forKey: .description)
+        self.publishedAt = try snippetContainer.decode(Date.self, forKey: .publishedAt)
         
         let thumbnailContainer = try snippetContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .thumbnails)
         let highContainer = try thumbnailContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .high)

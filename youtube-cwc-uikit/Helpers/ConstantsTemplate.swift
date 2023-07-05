@@ -13,4 +13,5 @@ import Foundation
 //    static var playlistId = ""
 //
 //    static var apiUrl = ""
+//    static var videoCellId = "VideoCell"
 //}
