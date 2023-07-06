@@ -148,7 +148,16 @@ class DetailViewController: UIViewController {
         
         subscribeButton.addAction(
             UIAction(handler: { action in
-                print("Subscribe tapped")
+                let rating = self.likedVideo ? "none" : "like"
+                
+                Task {
+                    do {
+                        try await self.model.setSubscription(channelId: Constants.channelId)
+                        self.subscribeButton.setTitle("Subscribed!", for: .normal)
+                    } catch {
+                        print(error)
+                    }
+                }
             }), for: .touchUpInside)
     }
     
@@ -171,11 +180,22 @@ class DetailViewController: UIViewController {
                 print(error)
             }
         }
-        
-        //let videoId = video.videoId
     }
     
     func setSubscribeButtonText() {
-        
+        Task {
+            do {
+                let isSubscribed = try await model.getSubscription(channelId: Constants.channelId).items?.id != nil
+                
+                if isSubscribed {
+                    self.subscribeButton.setTitle("Subscribed!", for: .normal)
+                } else {
+                    self.subscribeButton.setTitle("Subscribe", for: .normal)
+                }
+                
+            } catch {
+                print(error)
+            }
+        }
     }
 }

@@ -53,4 +53,43 @@ class Model {
         
         let _ = try await dataTask.value
     }
+    
+    func getSubscription(channelId: String) async throws -> SubscriptionResponse {
+        var url = URL(string: Constants.ytApiBaseUrl + Constants.subscriptionsPath)!
+        url.append(queryItems: [
+            URLQueryItem(name: "access_token", value: token),
+            URLQueryItem(name: "part", value: "subscriberSnippet"),
+            URLQueryItem(name: "mine", value: "true"),
+            URLQueryItem(name: "forChannelId", value: channelId)
+        ])
+        
+        let dataTask = AF.request(url)
+            .validate()
+            .serializingDecodable(SubscriptionResponse.self, automaticallyCancelling: true, decoder: decoder)
+        
+        return try await dataTask.value
+    }
+    
+    func setSubscription(channelId: String) async throws {
+        var url = URL(string: Constants.ytApiBaseUrl + Constants.subscriptionsPath)!
+        url.append(queryItems: [
+            URLQueryItem(name: "access_token", value: token),
+            URLQueryItem(name: "part", value: "snippet")
+        ])
+        
+        let body: [String: Any] = [
+            "snippet": [
+                "resourceId": [
+                    "channelId": channelId,
+                    "kind": "youtube#channel"
+                ]
+            ]
+        ]
+        
+        let dataTask = AF.request(url, method: .post, parameters: body, encoding: JSONEncoding())
+            .validate()
+            .serializingData(automaticallyCancelling: true)
+        
+        let _ = try await dataTask.value
+    }
 }

@@ -10,6 +10,8 @@
 		DF2FC8B62A562BEF005FB005 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DF2FC8B52A562BEF005FB005 /* Alamofire */; };
 		DF2FC8B82A5632EE005FB005 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2FC8B72A5632EE005FB005 /* Rating.swift */; };
 		DF2FC8BA2A5633F0005FB005 /* RatingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2FC8B92A5633F0005FB005 /* RatingResponse.swift */; };
+		DF2FC8BC2A5641AE005FB005 /* SubscriptionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2FC8BB2A5641AE005FB005 /* SubscriptionResponse.swift */; };
+		DF2FC8BE2A56426B005FB005 /* ChannelSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2FC8BD2A56426B005FB005 /* ChannelSubscription.swift */; };
 		DF35FEEA2A4D0E81005759AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF35FEE92A4D0E81005759AA /* AppDelegate.swift */; };
 		DF35FEEC2A4D0E81005759AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF35FEEB2A4D0E81005759AA /* SceneDelegate.swift */; };
 		DF35FEEE2A4D0E81005759AA /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF35FEED2A4D0E81005759AA /* ListViewController.swift */; };
@@ -32,6 +34,8 @@
 /* Begin PBXFileReference section */
 		DF2FC8B72A5632EE005FB005 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		DF2FC8B92A5633F0005FB005 /* RatingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingResponse.swift; sourceTree = "<group>"; };
+		DF2FC8BB2A5641AE005FB005 /* SubscriptionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionResponse.swift; sourceTree = "<group>"; };
+		DF2FC8BD2A56426B005FB005 /* ChannelSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelSubscription.swift; sourceTree = "<group>"; };
 		DF35FEE62A4D0E81005759AA /* youtube-cwc-uikit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "youtube-cwc-uikit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF35FEE92A4D0E81005759AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF35FEEB2A4D0E81005759AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 				DF2FC8B72A5632EE005FB005 /* Rating.swift */,
 				DFB58EB02A539B78000681F6 /* VideoResponse.swift */,
 				DF2FC8B92A5633F0005FB005 /* RatingResponse.swift */,
+				DF2FC8BB2A5641AE005FB005 /* SubscriptionResponse.swift */,
+				DF2FC8BD2A56426B005FB005 /* ChannelSubscription.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -229,7 +235,9 @@
 				DF55A48C2A4D2525004DFAB1 /* Video.swift in Sources */,
 				DF8A0AB12A54F7CF009D5D88 /* CacheManager.swift in Sources */,
 				DF35FEEA2A4D0E81005759AA /* AppDelegate.swift in Sources */,
+				DF2FC8BE2A56426B005FB005 /* ChannelSubscription.swift in Sources */,
 				DF35FEEC2A4D0E81005759AA /* SceneDelegate.swift in Sources */,
+				DF2FC8BC2A5641AE005FB005 /* SubscriptionResponse.swift in Sources */,
 				DF2FC8B82A5632EE005FB005 /* Rating.swift in Sources */,
 				DF8A0AAF2A54E993009D5D88 /* UIFont+Extensions.swift in Sources */,
 				DF55A4902A4D2562004DFAB1 /* Constants.swift in Sources */,
