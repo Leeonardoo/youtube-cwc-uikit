@@ -9,6 +9,15 @@ import Foundation
 
 //struct Constants {
 //
+//    private static func getPlaylistId() -> String {
+//        if let bundleDictionary = Bundle.main.infoDictionary,
+//           let playlistId = bundleDictionary["playlistId"] as? String {
+//            return playlistId
+//        }
+//
+//        return ""
+//    }
+//
 //    static var apiKey = ""
 //    static var playlistId = "UULF2D6eRvCeMtcF5OGHf1-trw"
 //    static var channelId = "UC2D6eRvCeMtcF5OGHf1-trw"
