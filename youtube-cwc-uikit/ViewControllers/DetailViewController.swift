@@ -28,6 +28,29 @@ class DetailViewController: UIViewController {
         return view
     }()
     
+    private lazy var likeButton: UIButton = {
+        let view = UIButton(type: .system)
+        view.setTitle("Like", for: .normal)
+        
+        return view
+    }()
+    
+    private lazy var subscribeButton: UIButton = {
+        let view = UIButton(type: .system)
+        view.setTitle("Subscribe", for: .normal)
+        
+        return view
+    }()
+    
+    private lazy var buttonsStackView: UIStackView = {
+       let view = UIStackView(arrangedSubviews: [likeButton, subscribeButton])
+        view.axis = .horizontal
+        view.distribution = .fillEqually
+        view.spacing = 8
+        
+        return view
+    }()
+    
     private lazy var textView: UITextView = {
         let view = UITextView()
         view.isEditable = false
@@ -37,7 +60,7 @@ class DetailViewController: UIViewController {
     }()
     
     private lazy var stackView: UIStackView = {
-        let view = UIStackView(arrangedSubviews: [titleLabel, dayLabel, webView, textView])
+        let view = UIStackView(arrangedSubviews: [titleLabel, dayLabel, webView, buttonsStackView, textView])
         view.translatesAutoresizingMaskIntoConstraints = false
         view.axis = .vertical
         view.spacing = 8
@@ -45,7 +68,10 @@ class DetailViewController: UIViewController {
         return view
     }()
     
+    private let model = Model()
     private var video: Video?
+    
+    private var likedVideo = false
     
     init(_ video: Video) {
         super.init(nibName: nil, bundle: nil)
@@ -61,6 +87,10 @@ class DetailViewController: UIViewController {
         
         self.setupViews()
         self.setupConstraints()
+        self.setupActions()
+        
+        self.setLikeButtonText()
+        self.setSubscribeButtonText()
     }
     
     private func setupViews() {
@@ -96,5 +126,56 @@ class DetailViewController: UIViewController {
         
         textView.setContentHuggingPriority(.defaultLow, for: .vertical)
         textView.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
+    }
+    
+    private func setupActions() {
+        guard let video else { return }
+        
+        likeButton.addAction(
+            UIAction(handler: { action in
+                let rating = self.likedVideo ? "none" : "like"
+                
+                Task {
+                    do {
+                        try await self.model.rate(videoId: video.videoId, rating: rating)
+                        self.setLikeButtonText()
+                    } catch {
+                        print(error)
+                    }
+                }
+                
+            }), for: .touchUpInside)
+        
+        subscribeButton.addAction(
+            UIAction(handler: { action in
+                print("Subscribe tapped")
+            }), for: .touchUpInside)
+    }
+    
+    func setLikeButtonText() {
+        guard let video else { return }
+        
+        Task {
+            do {
+                let rating = try await model.getVideoRating(videoId: video.videoId).items?.rating
+                
+                if rating == "dislike" || rating == "none" {
+                    self.likeButton.setTitle("Like", for: .normal)
+                    self.likedVideo = false
+                } else {
+                    self.likeButton.setTitle("Unlike", for: .normal)
+                    self.likedVideo = true
+                }
+                
+            } catch {
+                print(error)
+            }
+        }
+        
+        //let videoId = video.videoId
+    }
+    
+    func setSubscribeButtonText() {
+        
     }
 }

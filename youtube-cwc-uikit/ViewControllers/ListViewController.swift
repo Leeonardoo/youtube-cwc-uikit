@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class ListViewController: UIViewController {
 
@@ -35,6 +36,7 @@ class ListViewController: UIViewController {
         self.tableView.delegate = self
         
         self.tableView.register(VideoCell.self, forCellReuseIdentifier: Constants.videoCellId)
+        self.tableView.register(SignInCell.self, forCellReuseIdentifier: Constants.signInCellId)
         self.view.addSubview(tableView)
     }
     
@@ -63,27 +65,58 @@ class ListViewController: UIViewController {
 extension ListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        videos.count
+        guard videos.count > 0 else { return 0 }
+        
+        let hasPreviousSignIn = GIDSignIn.sharedInstance.hasPreviousSignIn()
+        
+        return videos.count + (!hasPreviousSignIn ? 1 : 0)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.videoCellId, for: indexPath) as! VideoCell
-        
-        let video = self.videos[indexPath.row]
-        cell.video = video
-        
-        return cell
+        if indexPath.row < videos.count {
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.videoCellId, for: indexPath) as! VideoCell
+            
+            let video = self.videos[indexPath.row]
+            cell.video = video
+            
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.signInCellId, for: indexPath) as! SignInCell
+            cell.delegate = self
+            
+            return cell
+        }
     }
 }
 
+//MARK: - TableView
 extension ListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
         
+        guard indexPath.row < videos.count else { return }
+        
         let video = self.videos[indexPath.row]
         let viewController = DetailViewController(video)
         
         self.present(viewController, animated: true)
+    }
+}
+
+//MARK: - SignIn
+extension ListViewController: SignInDelegate {
+    
+    func onTapSignIn() {
+        GIDSignIn.sharedInstance.signIn(withPresenting: self, hint: nil, additionalScopes: ["https://www.googleapis.com/auth/youtube"]) { signInResult, error in
+            guard error == nil else {
+                print(String(describing: error))
+                return
+            }
+            
+            token = signInResult?.user.accessToken.tokenString ?? ""
+            print("Token: \(token)")
+            self.tableView.reloadData()
+        }
     }
 }

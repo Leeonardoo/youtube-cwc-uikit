@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Response: Decodable {
+struct VideoResponse: Decodable {
     
     var items: [Video]?
     
