@@ -7,21 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF2FC8B62A562BEF005FB005 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DF2FC8B52A562BEF005FB005 /* Alamofire */; };
+		DF2FC8B82A5632EE005FB005 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2FC8B72A5632EE005FB005 /* Rating.swift */; };
+		DF2FC8BA2A5633F0005FB005 /* RatingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2FC8B92A5633F0005FB005 /* RatingResponse.swift */; };
+		DF2FC8BC2A5641AE005FB005 /* SubscriptionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2FC8BB2A5641AE005FB005 /* SubscriptionResponse.swift */; };
+		DF2FC8BE2A56426B005FB005 /* ChannelSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2FC8BD2A56426B005FB005 /* ChannelSubscription.swift */; };
 		DF35FEEA2A4D0E81005759AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF35FEE92A4D0E81005759AA /* AppDelegate.swift */; };
 		DF35FEEC2A4D0E81005759AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF35FEEB2A4D0E81005759AA /* SceneDelegate.swift */; };
-		DF35FEEE2A4D0E81005759AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF35FEED2A4D0E81005759AA /* ViewController.swift */; };
+		DF35FEEE2A4D0E81005759AA /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF35FEED2A4D0E81005759AA /* ListViewController.swift */; };
 		DF35FEF32A4D0E83005759AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF35FEF22A4D0E83005759AA /* Assets.xcassets */; };
 		DF35FEF62A4D0E83005759AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF35FEF42A4D0E83005759AA /* LaunchScreen.storyboard */; };
+		DF55A48C2A4D2525004DFAB1 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF55A48B2A4D2525004DFAB1 /* Video.swift */; };
+		DF55A48E2A4D254C004DFAB1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF55A48D2A4D254C004DFAB1 /* Model.swift */; };
+		DF55A4902A4D2562004DFAB1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF55A48F2A4D2562004DFAB1 /* Constants.swift */; };
+		DF55A4922A4D2568004DFAB1 /* ConstantsTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF55A4912A4D2568004DFAB1 /* ConstantsTemplate.swift */; };
+		DF8A0AAF2A54E993009D5D88 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8A0AAE2A54E993009D5D88 /* UIFont+Extensions.swift */; };
+		DF8A0AB12A54F7CF009D5D88 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8A0AB02A54F7CF009D5D88 /* CacheManager.swift */; };
+		DF8A0AB32A54FB15009D5D88 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8A0AB22A54FB15009D5D88 /* DetailViewController.swift */; };
+		DF8A0AB62A5503DD009D5D88 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DF8A0AB52A5503DD009D5D88 /* GoogleSignInSwift */; };
+		DF8A0AB92A550CF4009D5D88 /* SignInCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8A0AB82A550CF4009D5D88 /* SignInCell.swift */; };
+		DF8A0ABB2A551043009D5D88 /* SignInDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8A0ABA2A551043009D5D88 /* SignInDelegate.swift */; };
+		DFB58EB12A539B78000681F6 /* VideoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB58EB02A539B78000681F6 /* VideoResponse.swift */; };
+		DFB58EB32A53BDB6000681F6 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB58EB22A53BDB6000681F6 /* VideoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF2FC8B72A5632EE005FB005 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
+		DF2FC8B92A5633F0005FB005 /* RatingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingResponse.swift; sourceTree = "<group>"; };
+		DF2FC8BB2A5641AE005FB005 /* SubscriptionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionResponse.swift; sourceTree = "<group>"; };
+		DF2FC8BD2A56426B005FB005 /* ChannelSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelSubscription.swift; sourceTree = "<group>"; };
 		DF35FEE62A4D0E81005759AA /* youtube-cwc-uikit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "youtube-cwc-uikit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF35FEE92A4D0E81005759AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF35FEEB2A4D0E81005759AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DF35FEED2A4D0E81005759AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DF35FEED2A4D0E81005759AA /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		DF35FEF22A4D0E83005759AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF35FEF52A4D0E83005759AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF35FEF72A4D0E83005759AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF55A48B2A4D2525004DFAB1 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		DF55A48D2A4D254C004DFAB1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DF55A48F2A4D2562004DFAB1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DF55A4912A4D2568004DFAB1 /* ConstantsTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsTemplate.swift; sourceTree = "<group>"; };
+		DF8A0AAE2A54E993009D5D88 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		DF8A0AB02A54F7CF009D5D88 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		DF8A0AB22A54FB15009D5D88 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DF8A0AB82A550CF4009D5D88 /* SignInCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCell.swift; sourceTree = "<group>"; };
+		DF8A0ABA2A551043009D5D88 /* SignInDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDelegate.swift; sourceTree = "<group>"; };
+		DFB58EB02A539B78000681F6 /* VideoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoResponse.swift; sourceTree = "<group>"; };
+		DFB58EB22A53BDB6000681F6 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF8A0AB62A5503DD009D5D88 /* GoogleSignInSwift in Frameworks */,
+				DF2FC8B62A562BEF005FB005 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,14 +88,61 @@
 		DF35FEE82A4D0E81005759AA /* youtube-cwc-uikit */ = {
 			isa = PBXGroup;
 			children = (
-				DF35FEE92A4D0E81005759AA /* AppDelegate.swift */,
-				DF35FEEB2A4D0E81005759AA /* SceneDelegate.swift */,
-				DF35FEED2A4D0E81005759AA /* ViewController.swift */,
+				DFB58EB82A53BDDA000681F6 /* Helpers */,
+				DFB58EB62A53BDC8000681F6 /* Models */,
+				DFB58EB52A53BDC3000681F6 /* Views */,
+				DFB58EB42A53BDBB000681F6 /* ViewControllers */,
 				DF35FEF22A4D0E83005759AA /* Assets.xcassets */,
 				DF35FEF42A4D0E83005759AA /* LaunchScreen.storyboard */,
 				DF35FEF72A4D0E83005759AA /* Info.plist */,
+				DF35FEE92A4D0E81005759AA /* AppDelegate.swift */,
+				DF35FEEB2A4D0E81005759AA /* SceneDelegate.swift */,
 			);
 			path = "youtube-cwc-uikit";
+			sourceTree = "<group>";
+		};
+		DFB58EB42A53BDBB000681F6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DF35FEED2A4D0E81005759AA /* ListViewController.swift */,
+				DF8A0AB22A54FB15009D5D88 /* DetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DFB58EB52A53BDC3000681F6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DFB58EB22A53BDB6000681F6 /* VideoCell.swift */,
+				DF8A0AB82A550CF4009D5D88 /* SignInCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DFB58EB62A53BDC8000681F6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DF55A48D2A4D254C004DFAB1 /* Model.swift */,
+				DF55A48B2A4D2525004DFAB1 /* Video.swift */,
+				DF2FC8B72A5632EE005FB005 /* Rating.swift */,
+				DFB58EB02A539B78000681F6 /* VideoResponse.swift */,
+				DF2FC8B92A5633F0005FB005 /* RatingResponse.swift */,
+				DF2FC8BB2A5641AE005FB005 /* SubscriptionResponse.swift */,
+				DF2FC8BD2A56426B005FB005 /* ChannelSubscription.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DFB58EB82A53BDDA000681F6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DF8A0ABA2A551043009D5D88 /* SignInDelegate.swift */,
+				DF55A48F2A4D2562004DFAB1 /* Constants.swift */,
+				DF55A4912A4D2568004DFAB1 /* ConstantsTemplate.swift */,
+				DF8A0AAE2A54E993009D5D88 /* UIFont+Extensions.swift */,
+				DF8A0AB02A54F7CF009D5D88 /* CacheManager.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +161,10 @@
 			dependencies = (
 			);
 			name = "youtube-cwc-uikit";
+			packageProductDependencies = (
+				DF8A0AB52A5503DD009D5D88 /* GoogleSignInSwift */,
+				DF2FC8B52A562BEF005FB005 /* Alamofire */,
+			);
 			productName = "youtube-cwc-uikit";
 			productReference = DF35FEE62A4D0E81005759AA /* youtube-cwc-uikit.app */;
 			productType = "com.apple.product-type.application";
@@ -92,7 +177,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					DF35FEE52A4D0E81005759AA = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -108,6 +193,10 @@
 				Base,
 			);
 			mainGroup = DF35FEDD2A4D0E81005759AA;
+			packageReferences = (
+				DF8A0AB42A5503DD009D5D88 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				DF2FC8B42A562BEF005FB005 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = DF35FEE72A4D0E81005759AA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -134,9 +223,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF35FEEE2A4D0E81005759AA /* ViewController.swift in Sources */,
+				DFB58EB12A539B78000681F6 /* VideoResponse.swift in Sources */,
+				DF55A4922A4D2568004DFAB1 /* ConstantsTemplate.swift in Sources */,
+				DFB58EB32A53BDB6000681F6 /* VideoCell.swift in Sources */,
+				DF2FC8BA2A5633F0005FB005 /* RatingResponse.swift in Sources */,
+				DF8A0AB32A54FB15009D5D88 /* DetailViewController.swift in Sources */,
+				DF8A0ABB2A551043009D5D88 /* SignInDelegate.swift in Sources */,
+				DF8A0AB92A550CF4009D5D88 /* SignInCell.swift in Sources */,
+				DF55A48E2A4D254C004DFAB1 /* Model.swift in Sources */,
+				DF35FEEE2A4D0E81005759AA /* ListViewController.swift in Sources */,
+				DF55A48C2A4D2525004DFAB1 /* Video.swift in Sources */,
+				DF8A0AB12A54F7CF009D5D88 /* CacheManager.swift in Sources */,
 				DF35FEEA2A4D0E81005759AA /* AppDelegate.swift in Sources */,
+				DF2FC8BE2A56426B005FB005 /* ChannelSubscription.swift in Sources */,
 				DF35FEEC2A4D0E81005759AA /* SceneDelegate.swift in Sources */,
+				DF2FC8BC2A5641AE005FB005 /* SubscriptionResponse.swift in Sources */,
+				DF2FC8B82A5632EE005FB005 /* Rating.swift in Sources */,
+				DF8A0AAF2A54E993009D5D88 /* UIFont+Extensions.swift in Sources */,
+				DF55A4902A4D2562004DFAB1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +262,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -190,6 +295,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -218,6 +324,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -250,6 +357,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -344,6 +452,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DF2FC8B42A562BEF005FB005 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		DF8A0AB42A5503DD009D5D88 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DF2FC8B52A562BEF005FB005 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF2FC8B42A562BEF005FB005 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		DF8A0AB52A5503DD009D5D88 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF8A0AB42A5503DD009D5D88 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DF35FEDE2A4D0E81005759AA /* Project object */;
 }
